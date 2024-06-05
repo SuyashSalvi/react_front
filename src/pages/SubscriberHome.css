@@ -1,6 +1,8 @@
 .mainContainer{
     background-image: url("../images/download.png");
     background-color:#e9e2e2;
+    background-size: cover;
+    background-position: center;
 }
 .centered {
     height: 100vh;

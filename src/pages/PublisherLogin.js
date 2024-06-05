@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import PublisherHome from './PublisherHome';
 import Background from '../images/download.png';
 import * as URLS from './../utils.js';
+import './PublisherLogin.css';
 
 const PublisherLogin = () => {
 
@@ -44,14 +45,14 @@ const PublisherLogin = () => {
     } 
     
     return (
-        <>
+        <div className="dashboard-container">
             {success? (
                 <>
                    <PublisherHome/>
                 </>
             ):(
             
-            <MDBContainer style={{backgroundImage: "url("+ Background +")", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}} >
+                <MDBContainer style={{backgroundImage: "url("+ Background +")", height: "100vh", display: "flex", backgroundSize:"cover",backgroundPosition: "center", backgroundRepeat:"no-repeat", justifyContent: "center", alignItems: "center"}}>
                 
                 
                 <MDBRow >
@@ -63,10 +64,9 @@ const PublisherLogin = () => {
                     )}
                 </section>
                 
+                   
                     <MDBCol >
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />
-                    </MDBCol>
-                    <MDBCol >
+                    <div style={{ backgroundColor: 'white', padding: '90px',paddingTop:"10px", paddingTop:"10px", borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}>
                         <form onSubmit={handleSubmit}>
                             <MDBInput 
                                 wrapperClass='mt-5 mb-4'
@@ -93,11 +93,12 @@ const PublisherLogin = () => {
                                 <MDBBtn>Login</MDBBtn>
                             </div>
                         </form>
+                        </div>
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
             )}
-        </>
+        </div>
         
     );
 }
