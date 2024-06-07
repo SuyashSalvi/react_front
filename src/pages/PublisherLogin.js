@@ -15,7 +15,7 @@ import './PublisherLogin.css';
 
 const PublisherLogin = () => {
 
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState('siddhesh@gmail.com');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
@@ -74,8 +74,7 @@ const PublisherLogin = () => {
                                 id='emailId'
                                 type='email'
                                 size="lg"
-                                onChange={(e) => setUser(e.target.value)}
-                                value={user}
+                                
                                 required
                             />
                             <MDBInput 

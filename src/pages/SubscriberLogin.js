@@ -13,7 +13,7 @@ import * as URLS from './../utils.js';
 
 const SubscriberLogin = () => {
 
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState('piyush@gmail.com');
     const [pwd, setPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
@@ -66,8 +66,7 @@ const SubscriberLogin = () => {
                                 id='emailId'
                                 type='email'
                                 size="lg"
-                                onChange={(e) => setUser(e.target.value)}
-                                value={user}
+                                
                                 required
                             />
                             <MDBInput 
